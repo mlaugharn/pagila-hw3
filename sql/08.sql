@@ -31,13 +31,6 @@ SELECT
     WHERE
         f1.title ilike 'Bucket Brotherhood' AND 
         f2.film_id != f1.film_id
-/*        f2.film_id IN (
-            SELECT film_id
-            FROM film
-            JOIN inventory ON (film_id)
-            JOIN rental ON (inventory_id)
-            JOIN customer
-            WHERE */
     GROUP BY f2.film_id
     HAVING COUNT(DISTINCT c1.customer_id) > 2
     ORDER BY title

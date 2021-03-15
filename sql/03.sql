@@ -26,3 +26,4 @@ FROM (
         GROUP BY special_feature
         ORDER BY profit DESC) AS sub
 GROUP BY sub.special_feature
+ORDER BY special_feature ASC
